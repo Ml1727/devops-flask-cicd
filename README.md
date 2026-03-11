@@ -13,16 +13,17 @@ Project Architecture
 Local Development → GitHub Repository → AWS EC2 Server → Docker Container → Running Web Application
 
 ## Project Structure devops-flask-cicd
+devops-flask-cicd
 │
 ├── app.py
 ├── Dockerfile
 ├── requirements.txt
+├── Jenkinsfile
 ├── README.md
 │
-├── .github
-│   └── workflows
-│       └── deploy.yml
-
+└── .github
+└── workflows
+└── deploy.yml
 Steps Implemented
 
 ### 1. Created Flask Application
