@@ -3,21 +3,13 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-    steps {
-        git branch: 'main', url: 'https://github.com/Ml1727/devops-flask-cicd.git'
-    }
-}
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t flask-devops .'
             }
         }
 
-        stage('Run Container') {
+        stage('Run Docker Container') {
             steps {
                 sh 'docker stop flask-container || true'
                 sh 'docker rm flask-container || true'
